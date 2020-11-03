@@ -5,6 +5,13 @@
 Animal with a single public method Eat() that prints: "eating…"
 Dog with a single public method Bark() that prints: "barking…"
 Dog should inherit from Animal.
+2.	Multiple Inheritance
+Create three classes named Animal, Dog and Puppy. 
+Animal with a single public method Eat() that prints: "eating…"
+Dog with a single public method Bark() that prints: "barking…"
+Puppy with a single public method Weep() that prints: "weeping…"
+Dog should inherit from Animal. Puppy should inherit from Dog. 
+
 */
 
 
@@ -14,10 +21,12 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Single Inheritance");
-            Dog dog = new Dog();
-            dog.Eat();
-            dog.Bark();
+            //Console.WriteLine("Single Inheritance");
+            Console.WriteLine("Multiple Inheritance");
+            Puppy puppy = new Puppy();
+            puppy.Eat();
+            puppy.Bark();
+            puppy.Weep();
         }
 
     }
@@ -33,6 +42,13 @@ namespace Inheritance
         public void Bark()
         {
             Console.WriteLine("Barking");
+        }
+    }
+    class Puppy : Dog
+    {
+        public void Weep()
+        {
+            Console.WriteLine("Weeping");
         }
     }
 }
