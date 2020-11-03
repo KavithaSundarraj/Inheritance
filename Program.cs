@@ -11,6 +11,13 @@ Animal with a single public method Eat() that prints: "eating…"
 Dog with a single public method Bark() that prints: "barking…"
 Puppy with a single public method Weep() that prints: "weeping…"
 Dog should inherit from Animal. Puppy should inherit from Dog. 
+3.	Hierarchical Inheritance
+Create three classes named Animal, Dog and Cat. 
+Animal with a single public method Eat() that prints: "eating…"
+Dog with a single public method Bark() that prints: "barking…"
+Cat with a single public method Meow() that prints: "meowing…"
+Dog and Cat should inherit from Animal.
+
 
 */
 
@@ -22,11 +29,18 @@ namespace Inheritance
         static void Main(string[] args)
         {
             //Console.WriteLine("Single Inheritance");
-            Console.WriteLine("Multiple Inheritance");
-            Puppy puppy = new Puppy();
-            puppy.Eat();
-            puppy.Bark();
-            puppy.Weep();
+            /*Console.WriteLine("Multiple Inheritance");
+             Puppy puppy = new Puppy();
+             puppy.Eat();
+             puppy.Bark();
+             puppy.Weep();*/
+            Console.WriteLine("Hierarchial Inheritance");
+            Dog dog = new Dog();
+            dog.Eat();
+            dog.Bark();
+            Cat cat = new Cat();
+            cat.Eat();
+            cat.Meow();
         }
 
     }
@@ -42,6 +56,13 @@ namespace Inheritance
         public void Bark()
         {
             Console.WriteLine("Barking");
+        }
+    }
+    class Cat : Animal
+    {
+        public void Meow()
+        {
+            Console.WriteLine("Meowing");
         }
     }
     class Puppy : Dog
